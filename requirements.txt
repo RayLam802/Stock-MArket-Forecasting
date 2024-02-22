@@ -7,3 +7,4 @@ scikit-learn
 jupyter
 scikit-learn
 tensorflow
+stockstats
