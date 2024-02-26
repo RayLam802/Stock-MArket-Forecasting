@@ -31,4 +31,4 @@ for i in range(len(df)):
             )
 fig.autofmt_xdate()
 fig.set_size_inches(20, 10.5)
-fig.savefig('define_y.png')
+fig.savefig('define_y_3years.png')

@@ -1,6 +1,6 @@
 import pandas as pd
 
-data = pd.read_csv('data/HSIDropNA.csv')
+data = pd.read_csv('data/HSILabel.csv')
 
 # 決定切割比例為 70%:30%
 split_point = int(len(data)*0.7)

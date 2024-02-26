@@ -2,6 +2,9 @@ import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import export_graphviz
 import graphviz 
+from sklearn.metrics import confusion_matrix
+import os
+os.environ['PATH'] += os.pathsep + 'C:\Program Files\Graphviz\bin'
 
 train = pd.read_csv('data/HSITrain.csv')
 test = pd.read_csv('data/HSITest.csv')
@@ -29,3 +32,9 @@ dot_data = export_graphviz(model, out_file = None,
                            special_characters = True)
 graph = graphviz.Source(dot_data)
 graph
+
+# 混淆矩陣
+print(confusion_matrix(test_y, prediction))
+
+# 準確率
+print(model.score(test_X, test_y))
